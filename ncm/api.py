@@ -89,9 +89,10 @@ class CloudApi(object):
         :param playlist_id:
         :return:
         """
+               
         url = get_playlist_url(playlist_id)
         result = self.get_request(url)
-        return result['result']['tracks'], result['result']['name']
+        return result['playlist']['trackIds'], result['playlist']['name']
 
 
 
